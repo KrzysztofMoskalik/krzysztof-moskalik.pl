@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Setup Project
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-user-account:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v0.1.8
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: whoami
