@@ -15,5 +15,6 @@ jobs:
         host: ${{ vars.HOST }}
         username: ${{ vars.USERNAME }}
         key: ${{ secrets.KEY }}
+        passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
         script: whoami
