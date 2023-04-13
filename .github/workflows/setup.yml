@@ -18,4 +18,4 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
         script: |
-          git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/${{ GITHUB_REPOSITORY }}.git ./www
+          git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/${ GITHUB_REPOSITORY }.git ./www
