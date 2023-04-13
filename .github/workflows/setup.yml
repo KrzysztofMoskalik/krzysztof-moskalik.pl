@@ -18,8 +18,8 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
         script: |
-          #echo ${env.GITHUB_REPOSITORY}
-          #echo ${{env.GITHUB_REPOSITORY}}
-          #echo ${{vars.GITHUB_REPOSITORY}}
-          #echo ${env.GITHUB_REPOSITORY}
+          echo "${env.GITHUB_REPOSITORY}"
+          echo "${{env.GITHUB_REPOSITORY}}"
+          echo "${{vars.GITHUB_REPOSITORY}}"
+          echo "${env.GITHUB_REPOSITORY}"
           #git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/${{ env.GITHUB_REPOSITORY }}.git ./www
