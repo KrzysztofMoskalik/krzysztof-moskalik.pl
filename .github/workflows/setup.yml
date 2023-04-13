@@ -20,7 +20,7 @@ jobs:
         script: |
           echo ${GITHUB_REPOSITORY}
           echo ${{GITHUB_REPOSITORY}}
-          echo ${env.GITHUB_REPOSITORY}
+          #echo ${env.GITHUB_REPOSITORY}
           #echo ${{env.GITHUB_REPOSITORY}}
           #echo ${{vars.GITHUB_REPOSITORY}}
           #echo ${env.GITHUB_REPOSITORY}
