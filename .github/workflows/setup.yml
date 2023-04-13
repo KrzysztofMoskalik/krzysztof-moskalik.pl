@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy
+name: Setup project
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: SSH Remote Commands
+    - name: Clone repo
       uses: appleboy/ssh-action@v0.1.8
       with:
         host: ${{ vars.HOST }}
@@ -17,6 +17,5 @@ jobs:
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
-        script: whoami
-    - name: Deploy code
-      uses: actions/checkout@v3
+        script: |
+          git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/{{ env.GITHUB_REPOSITORY }}.git
