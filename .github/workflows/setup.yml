@@ -12,20 +12,22 @@ jobs:
     - name: Clone repo
       uses: appleboy/ssh-action@v0.1.8
       env:
-        REPO_URL: https://${{ secrets.ACCESS_TOKEN }}@github.com/${{ env.GITHUB_REPOSITORY }}.git
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       with:
         host: ${{ vars.HOST }}
         username: ${{ vars.USERNAME }}
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
-        envs: GITHUB_REPOSITORY
+        envs: 
+          GITHUB_REPOSITORY
+          ACCESS_TOKEN
         script: |
-          echo "repo $REPO_URL"
-          echo "repo $GITHUB_REPOSITORY"
-          echo "gh repo $GITHUB_REPOSITORY"
+          echo "https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git ./www"
+          #echo "repo $GITHUB_REPOSITORY"
+          #echo "gh repo $GITHUB_REPOSITORY"
           #echo "${env.GITHUB_REPOSITORY}"
           #echo "${{env.GITHUB_REPOSITORY}}"
           #echo "${{vars.GITHUB_REPOSITORY}}"
           #echo "${env.GITHUB_REPOSITORY}"
-          #git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/${{ env.GITHUB_REPOSITORY }}.git ./www
+          #git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY.git ./www
