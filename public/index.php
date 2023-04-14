@@ -46,6 +46,7 @@ $controllers = $loader->loadClassesFromDirectory(
 );
 
 /** @var BaseController $controller */
-$controller = reset(array_filter($controllers, fn ($object) => get_class($object) === $parameters['_controller']));
+$filteredControllers = array_filter($controllers, fn ($object) => get_class($object) === $parameters['_controller']);
+$controller = reset($filteredControllers);
 
 $controller->run();
