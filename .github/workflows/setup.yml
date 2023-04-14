@@ -21,5 +21,4 @@ jobs:
         port: ${{ vars.PORT }}
         envs: GITHUB_REPOSITORY,ACCESS_TOKEN
         script: |
-          git clone https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git ./www
-          docker-compose up -d
+          git clone https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git ./www && docker-compose up -d
