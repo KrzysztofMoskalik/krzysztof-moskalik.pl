@@ -21,8 +21,10 @@ jobs:
         port: ${{ vars.PORT }}
         envs: GITHUB_REPOSITORY,ACCESS_TOKEN
         script: |
+          rm -rf www
           git clone https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git ./www
           cd www
           #docker-compose up -d
           #which docker-compose
           whoami
+          ls /snap/bin/docker-compose
