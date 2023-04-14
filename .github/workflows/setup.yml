@@ -25,6 +25,3 @@ jobs:
           git clone https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git ./www
           cd www
           /snap/bin/docker-compose up -d
-          #which docker-compose
-          whoami
-          ls /snap/bin/docker-compose
