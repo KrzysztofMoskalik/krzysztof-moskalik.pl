@@ -19,7 +19,7 @@ jobs:
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
-        envs: GITHUB_REPOSITORY ACCESS_TOKEN
+        envs: GITHUB_REPOSITORY,ACCESS_TOKEN
         script: |
           echo "https://$ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git ./www"
           echo "repo $GITHUB_REPOSITORY"
