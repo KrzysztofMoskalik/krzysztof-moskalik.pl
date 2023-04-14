@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+
+use KrzysztofMoskalik\ClassLoader\ClassLoader;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Command\Command;
+
+$application = new Application();
+$application->setName('Developer Utils');
+
+$loader = new ClassLoader();
+$commands = $loader->loadClassesFromDirectory(
+    __DIR__ . '/../src/Command',
+    [],
+    Command::class
+);
+
+foreach ($commands as $command) {
+    $application->add($command);
+}
+
+$application->run();
