@@ -20,7 +20,8 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
         script: |
-          echo $REPO_URL
+          echo "repo $REPO_URL"
+          echo "gh repo $GITHUB_REPOSITORY"
           #echo "${env.GITHUB_REPOSITORY}"
           #echo "${{env.GITHUB_REPOSITORY}}"
           #echo "${{vars.GITHUB_REPOSITORY}}"
