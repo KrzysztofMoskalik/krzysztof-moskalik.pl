@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  setup:
     runs-on: ubuntu-latest
     steps:
-    - name: Clone repo
+    - name: Clone repo and run containers
       uses: appleboy/ssh-action@v0.1.8
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
