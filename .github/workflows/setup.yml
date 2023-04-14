@@ -11,6 +11,8 @@ jobs:
     steps:
     - name: Clone repo
       uses: appleboy/ssh-action@v0.1.8
+      env:
+        REPO_URL: https://${{ secrets.ACCESS_TOKEN }}@github.com/${{ env.GITHUB_REPOSITORY }}.git
       with:
         host: ${{ vars.HOST }}
         username: ${{ vars.USERNAME }}
@@ -18,8 +20,9 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ vars.PORT }}
         script: |
-          echo "${env.GITHUB_REPOSITORY}"
-          echo "${{env.GITHUB_REPOSITORY}}"
-          echo "${{vars.GITHUB_REPOSITORY}}"
-          echo "${env.GITHUB_REPOSITORY}"
+          echo $REPO_URL
+          #echo "${env.GITHUB_REPOSITORY}"
+          #echo "${{env.GITHUB_REPOSITORY}}"
+          #echo "${{vars.GITHUB_REPOSITORY}}"
+          #echo "${env.GITHUB_REPOSITORY}"
           #git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/${{ env.GITHUB_REPOSITORY }}.git ./www
