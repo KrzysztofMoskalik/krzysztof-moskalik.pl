@@ -26,6 +26,12 @@ class CvCommand extends Command {
             ->setRows([
                 [new TableCell('', ['colspan' => 3])],
                 new TableSeparator(),
+                ['January 2025 - now', 'VonRoll Infratec', 'PHP Backend Developer (Symfony)'],
+                new TableSeparator(),
+                ['April 2024 - December 2024', 'G2A', 'PHP Backend Developer (Laravel)'],
+                new TableSeparator(),
+                ['September 2022 - March 2024', 'Gfinity', 'PHP Backend Developer (Symfony)'],
+                new TableSeparator(),
                 ['June 2020 - August 2022', 'Velis', 'PHP Backend Developer'],
                 new TableSeparator(),
                 ['December 2019 - May 2020', 'Nonstop', 'PHP Backend Developer (Laravel)'],
@@ -44,7 +50,7 @@ class CvCommand extends Command {
         $stacks = [
             'PHP      ' => 80,
             'Symfony  ' => 70,
-            'Laravel  ' => 40,
+            'Laravel  ' => 60,
             'Phalcon  ' => 30,
             'Magento 2' => 50,
             'PHPUnit  ' => 60,
@@ -66,8 +72,8 @@ class CvCommand extends Command {
         $output->writeln('Basics of:');
         $output->writeln('- frontend development (HTML, CSS, JS, jQuery, nodeJS, React, Dojo)');
         $output->writeln('- mobile development (Dojo and Cordova Phonegap for Android and iOS)');
-        $output->writeln('- devOps (Jenkins, Docker, Ansible, Nginx, Apache, AWS)');
-        $output->writeln('- IoT');
+        $output->writeln('- devOps (Jenkins, Docker, Ansible, Nginx, Apache, AWS, Proxmox)');
+        $output->writeln('- IoT, Smart Home');
 
         $output->writeln('');
         $output->writeln('IDE: PHPStorm');
