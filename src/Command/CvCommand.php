@@ -26,7 +26,7 @@ class CvCommand extends Command {
             ->setRows([
                 [new TableCell('', ['colspan' => 3])],
                 new TableSeparator(),
-                ['January 2025 - now', 'VonRoll Infratec', 'PHP Backend Developer (Symfony)'],
+                ['January 2025 - October 2025', 'VonRoll Infratec', 'PHP Backend Developer (Symfony)'],
                 new TableSeparator(),
                 ['April 2024 - December 2024', 'G2A', 'PHP Backend Developer (Laravel)'],
                 new TableSeparator(),
@@ -93,3 +93,4 @@ class CvCommand extends Command {
         return 0;
     }
 }
+
