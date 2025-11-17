@@ -6,9 +6,8 @@ services:
       target: app-prod
       dockerfile: Dockerfile
     image: webdevops/php-nginx:8.2
-    container_name: php-nginx
-    expose:
-      - 80
+    ports:
+      - "8080:80"
     volumes:
       - ./public:/app/public:cached
       - ./src:/app/src:cached   # optional, if you have other PHP code

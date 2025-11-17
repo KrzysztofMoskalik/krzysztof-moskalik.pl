@@ -1,6 +1,7 @@
 FROM webdevops/php-nginx:8.2 AS base
 
 WORKDIR /app
+COPY . /app
 RUN chmod -R 755 /app
 
 FROM base as app-prod
