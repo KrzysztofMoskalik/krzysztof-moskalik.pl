@@ -13,7 +13,4 @@ services:
       - ./src:/app/src:cached   # optional, if you have other PHP code
     environment:
       - WEB_DOCUMENT_ROOT=/app/public
-      - PHP_DISPLAY_ERRORS=1
-      - VIRTUAL_HOST=krzysztof-moskalik.pl
-      - LETSENCRYPT_HOST=krzysztof-moskalik.pl
     restart: unless-stopped
