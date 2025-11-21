@@ -11,6 +11,4 @@ services:
     volumes:
       - ./public:/app/public:cached
       - ./src:/app/src:cached   # optional, if you have other PHP code
-    environment:
-      - WEB_DOCUMENT_ROOT=/app/public
     restart: unless-stopped

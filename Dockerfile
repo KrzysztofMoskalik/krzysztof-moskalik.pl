@@ -7,9 +7,11 @@ RUN chmod -R 755 /app
 FROM base as app-prod
 RUN git config --global --add safe.directory /app
 RUN composer install --no-interaction --optimize-autoloader --no-dev
+ENV WEB_DOCUMENT_ROOT=/app/public
 ENV APP_ENV=prod
 
 FROM base as app-dev
 RUN git config --global --add safe.directory /app
 RUN composer install --no-interaction --optimize-autoloader
+ENV WEB_DOCUMENT_ROOT=/app/public
 ENV APP_ENV=dev
