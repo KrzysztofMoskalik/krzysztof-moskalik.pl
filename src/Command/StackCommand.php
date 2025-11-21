@@ -15,7 +15,7 @@ class StackCommand extends Command {
         $this->setHidden(true);
     }
 
-    protected function execute (InputInterface $input, OutputInterface $output) {
+    protected function execute (InputInterface $input, OutputInterface $output): int {
         $output->writeln('My stack:');
 
         return 0;

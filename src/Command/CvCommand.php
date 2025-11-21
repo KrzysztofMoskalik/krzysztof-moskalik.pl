@@ -16,7 +16,7 @@ class CvCommand extends Command {
             ->setDescription('My commercial experience');
     }
 
-    protected function execute (InputInterface $input, OutputInterface $output) {
+    protected function execute (InputInterface $input, OutputInterface $output): int {
         $output->writeln('Curriculum Vitae');
         $output->writeln('');
 

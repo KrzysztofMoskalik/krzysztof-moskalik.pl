@@ -14,7 +14,7 @@ class HelpCommand extends Command {
             ->setDescription('Available commands');
     }
 
-    protected function execute (InputInterface $input, OutputInterface $output) {
+    protected function execute (InputInterface $input, OutputInterface $output): int {
         $output->writeln('Krzysztof Moskalik\'s Homepage');
         $output->writeln('PHP Developer');
         $output->writeln('');

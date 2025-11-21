@@ -13,7 +13,7 @@ class ContactCommand extends Command {
             ->setDescription('Links to my social media and email');
     }
 
-    protected function execute (InputInterface $input, OutputInterface $output) {
+    protected function execute (InputInterface $input, OutputInterface $output): int {
         $output->writeln('Contact me');
         $output->writeln('');
 

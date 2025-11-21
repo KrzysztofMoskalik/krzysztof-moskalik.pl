@@ -10,5 +10,5 @@ services:
       - "80"
     volumes:
       - ./public:/app/public:cached
-      - ./src:/app/src:cached   # optional, if you have other PHP code
+      - ./src:/app/src:cached
     restart: unless-stopped

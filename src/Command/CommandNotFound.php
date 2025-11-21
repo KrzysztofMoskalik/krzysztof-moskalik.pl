@@ -12,7 +12,7 @@ class CommandNotFound extends Command {
             ->setHidden(true);
     }
 
-    protected function execute (InputInterface $input, OutputInterface $output) {
+    protected function execute (InputInterface $input, OutputInterface $output): int {
         $output->writeln('Command not found. Type `[[!;;;internal;#help]help]` to see available commands.');
 
         return 0;

@@ -12,7 +12,7 @@ class AboutCommand extends Command {
             ->setDescription('About Me');
     }
 
-    protected function execute (InputInterface $input, OutputInterface $output) {
+    protected function execute (InputInterface $input, OutputInterface $output): int {
         $output->writeln('Hi! I\'m Krzysztof Moskalik');
         $output->writeln('');
         $output->writeln('I\'m PHP developer, based on Kraków, Poland, with over 10 years of commercial experience.');
